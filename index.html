@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -7,155 +7,289 @@
     <!-- $ DAISY UI TAILWIND -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+            <link rel="icon" type="image/png" href="assets/icons/logo.png">
     <title>Fuujin Personal Website</title>
 </head>
 
 <body class="flex flex-col items-center justify-center min-h-screen bg-[#161616] gap-6 p-6">
 
-    <div class="card card-border border-[#373737] bg-[#212121] w-full max-w-xl">
-        <div class="card-body">
-            <div class="flex items-center justify-between">
-                <!-- LEFT ICONS -->
-                <div class="flex items-center gap-3">
-                  <img src="assets/navbar/Home.png" alt="Home" class="cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110 hover:rotate-3" onclick="loadHome()" />
-<img src="assets/navbar/Console.png" alt="Projects" class="cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110 hover:-rotate-3" onclick="loadPage('src/projects.html')" />
-<img src="assets/navbar/Info.png" alt="Certificates" class="cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110 hover:rotate-2" onclick="loadPage('src/certificate.html')" />
-<img src="assets/navbar/Profile.png" alt="Profile" class="cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110 hover:-rotate-2" onclick="loadPage('src/about.html')" />
+<div class="card card-border border-[#373737] bg-[#212121] w-full max-w-xl">
+  <div class="card-body">
+    <div class="flex items-center justify-between">
 
-                </div>
+      <!-- LEFT ICONS -->
+      <div class="flex items-center gap-4">
 
-                <!-- RIGHT ICON AND BUTTON -->
-                <div class="flex items-center gap-2">
-                    <img src="assets/navbar/Sun.png" alt="Theme">
-                  <button class="inline-flex items-center justify-center gap-1
-           px-[14px] py-[7px]
-           text-white text-[12px] font-semibold cursor-pointer
-           rounded-md bg-[#2a2a2a] hover:bg-[#333] hover:scale-105 active:scale-95 transition-transform duration-200 ease-in-out"
-    style="font-family: 'Plus Jakarta Sans', sans-serif;">
-    Button
-</button>
+        <!-- HOME -->
+        <div class="relative group">
+          <img src="assets/navbar/Home.png" alt="Home"
+            class="cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110 hover:rotate-3"
+            onclick="loadHome()" />
 
-                </div>
-            </div>
+          <span
+            class="absolute -top-8 left-1/2 -translate-x-1/2
+            bg-[#1e1e1e] border border-[#333]
+            text-[10px] px-2 py-1 rounded-md
+            text-gray-300 tracking-wide
+            opacity-0 group-hover:opacity-100
+            translate-y-1 group-hover:translate-y-0
+            transition-all duration-200
+            pointer-events-none whitespace-nowrap">
+            Home
+          </span>
         </div>
-    </div>
 
-<div
-  id="content-card"
-  class="card card-border border-[#373737] bg-[#212121]
+        <!-- PROJECTS -->
+        <div class="relative group">
+          <img src="assets/navbar/Console.png" alt="Projects"
+            class="cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110 hover:-rotate-3"
+            onclick="loadPage('src/projects.html')" />
+
+          <span class="tooltip">Projects</span>
+        </div>
+
+        <!-- CERTIFICATES -->
+        <div class="relative group">
+          <img src="assets/navbar/Info.png" alt="Certificates"
+            class="cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110 hover:rotate-2"
+            onclick="loadPage('src/certificate.html')" />
+
+          <span class="tooltip">Certificates</span>
+        </div>
+
+        <!-- PROFILE -->
+        <div class="relative group">
+          <img src="assets/navbar/Profile.png" alt="Profile"
+            class="cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110 hover:-rotate-2"
+            onclick="loadPage('src/about.html')" />
+
+          <span class="tooltip">About Me</span>
+        </div>
+
+      </div>
+
+      <!-- RIGHT ICONS -->
+      <div class="flex items-center gap-3">
+
+        <!-- THEME -->
+        <div class="relative group">
+          <img src="assets/navbar/Sun.png" alt="Theme"
+            class="cursor-pointer transition hover:rotate-12" />
+
+          <span class="tooltip">Toggle Theme</span>
+        </div>
+
+        <!-- BUTTON -->
+        <div class="relative group">
+          <button
+            class="inline-flex items-center justify-center
+            px-[14px] py-[7px]
+            text-white text-[12px] font-semibold
+            rounded-md bg-[#2a2a2a]
+            hover:bg-[#333] hover:scale-105 active:scale-95
+            transition-all duration-200"
+            style="font-family: 'Plus Jakarta Sans', sans-serif;">
+            Button
+          </button>
+
+          <span class="tooltip">Action Button</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div id="content-card" class="card card-border border-[#373737] bg-[#212121]
          w-full max-w-xl min-h-[900px]
          text-white font-sans overflow-hidden
          transition-all duration-300 ease-in-out
          opacity-100 translate-y-0">
-</div>
-
-
-      <template id="home-template">
-  <div class="card-body p-8 flex flex-col gap-12">
-
-
-            <header class="flex justify-between items-start">
-    <div class="space-y-6 max-w-[60%]">
-        <div class="flex items-center gap-2 text-sm text-gray-400">
-            <span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span>
-            Web Developer
-        </div>
-
-        <div class="space-y-2">
-            <h1 class="text-5xl font-bold tracking-tight">I'm Fuujin</h1>
-            <p class="text-gray-400 text-sm leading-relaxed">
-                A 4th-year student at the University of Mindanao, Davao City, specializing in web development and digital design.
-            </p>
-        </div>
-
-        <!-- LANGUAGES & TOOLS -->
-        <div class="mt-4">
-            <h3 class="text-sm text-gray-400 uppercase tracking-widest mb-2">Languages & Tools</h3>
-            <div class="flex flex-wrap gap-3">
-                <!-- Languages -->
-                <div class="flex items-center gap-2 bg-[#262626] border border-[#333] px-3 py-2 rounded-lg hover:bg-[#333] transition">
-                    <img src="assets/icons/php.png" alt="PHP" class="w-5 h-5">
-                    <span class="text-xs text-gray-400">Laravel / PHP</span>
-                </div>
-                <div class="flex items-center gap-2 bg-[#262626] border border-[#333] px-3 py-2 rounded-lg hover:bg-[#333] transition">
-                    <img src="assets/icons/java.png" alt="Java" class="w-5 h-5">
-                    <span class="text-xs text-gray-400">Java</span>
-                </div>
-                <div class="flex items-center gap-2 bg-[#262626] border border-[#333] px-3 py-2 rounded-lg hover:bg-[#333] transition">
-                    <img src="assets/icons/python.png" alt="Python" class="w-5 h-5">
-                    <span class="text-xs text-gray-400">Python</span>
-                </div>
-
-                <!-- Tools -->
-                <div class="flex items-center gap-2 bg-[#262626] border border-[#333] px-3 py-2 rounded-lg hover:bg-[#333] transition">
-                    <img src="assets/icons/vscode.png" alt="VSCode" class="w-5 h-5">
-                    <span class="text-xs text-gray-400">VSCode</span>
-                </div>
-                <div class="flex items-center gap-2 bg-[#262626] border border-[#333] px-3 py-2 rounded-lg hover:bg-[#333] transition">
-                    <img src="assets/icons/figma.png" alt="Figma" class="w-5 h-5">
-                    <span class="text-xs text-gray-400">Figma</span>
-                </div>
-                <div class="flex items-center gap-2 bg-[#262626] border border-[#333] px-3 py-2 rounded-lg hover:bg-[#333] transition">
-                    <img src="assets/icons/visualstudio.png" alt="Visual Studio" class="w-5 h-5">
-                    <span class="text-xs text-gray-400">Visual Studio</span>
-                </div>
-                <div class="flex items-center gap-2 bg-[#262626] border border-[#333] px-3 py-2 rounded-lg hover:bg-[#333] transition">
-                    <img src="assets/icons/github.png" alt="GitHub" class="w-5 h-5">
-                    <span class="text-xs text-gray-400">GitHub</span>
-                </div>
-                <div class="flex items-center gap-2 bg-[#262626] border border-[#333] px-3 py-2 rounded-lg hover:bg-[#333] transition">
-                    <img src="assets/icons/mysql.png" alt="MySQL" class="w-5 h-5">
-                    <span class="text-xs text-gray-400">MySQL</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="flex gap-3 mt-4">
-            <button
-                class="bg-[#2a2a2a] border border-[#373737] px-4 py-2 rounded-lg text-xs flex items-center gap-2 hover:bg-[#333]">
-                <span>Download CV</span>
-            </button>
-            <button
-                class="bg-[#2a2a2a] border border-[#373737] px-4 py-2 rounded-lg text-xs hover:bg-[#333]">
-                Copy Email
-            </button>
-        </div>
     </div>
 
-    <div class="relative">
-        <div
-            class="absolute -top-4 -right-2 bg-[#1a2e1a] text-[#4ade80] text-[10px] px-3 py-1 rounded-full border border-[#2d4a2d] flex items-center gap-1.5">
-            <span class="w-1.5 h-1.5 rounded-full bg-[#4ade80] animate-pulse"></span>
-            AVAILABLE FOR COMMISSION
-        </div>
-        <div class="w-42 h-42 rounded-full border-4 border-[#2a2a2a] overflow-hidden">
-            <img src="/assets/profile/IMG20260120231211.jpg" alt="Fuujin"
-                class="w-full h-full object-cover" />
-        </div>
-    </div>
-</header>
+
+    <template id="home-template">
+        <div class="card-body p-8 flex flex-col gap-12">
 
 
-            <section class="space-y-4">
+          <header class="flex justify-between items-start gap-8">
+
+                <div class="space-y-6 max-w-[60%]">
+                    <div class="flex items-center gap-2 text-sm text-gray-400">
+                        <span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span>
+                        Web Developer
+                    </div>
+
+                    <div class="space-y-2">
+                        <h1 class="text-5xl font-bold tracking-tight">I'm Fuujin</h1>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            A 4th-year student at the University of Mindanao, Davao City, specializing in web
+                            development and digital design.
+                        </p>
+                    </div>
+
+                    <!-- LANGUAGES & TOOLS -->
+                    <div class="mt-4">
+                        <h3 class="text-xs  text-gray-400 uppercase tracking-widest mb-2">Languages & Tools</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <!-- Languages -->
+                            <div
+                                class="flex items-center gap-2 bg-[#262626] border border-[#333] px-3 py-2 rounded-lg hover:bg-[#333] transition">
+                                <img src="assets/icons/Laravel.png" alt="PHP" class="w-5 h-5">
+                                <span class="text-xs text-gray-400">Laravel / PHP</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-2 bg-[#262626] border border-[#333] px-3 py-2 rounded-lg hover:bg-[#333] transition">
+                                <img src="assets/icons/Java.png" alt="Java" class="w-5 h-5">
+                                <span class="text-xs text-gray-400">Java</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-2 bg-[#262626] border border-[#333] px-3 py-2 rounded-lg hover:bg-[#333] transition">
+                                <img src="assets/icons/python.png" alt="Python" class="w-5 h-5">
+                                <span class="text-xs text-gray-400">Python</span>
+                            </div>
+
+                            <!-- Tools -->
+                            <div
+                                class="flex items-center gap-2 bg-[#262626] border border-[#333] px-3 py-2 rounded-lg hover:bg-[#333] transition">
+                                <img src="assets/icons/VScode.png" alt="VSCode" class="w-5 h-5">
+                                <span class="text-xs text-gray-400">VSCode</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-2 bg-[#262626] border border-[#333] px-3 py-2 rounded-lg hover:bg-[#333] transition">
+                                <img src="assets/icons/figma.png" alt="Figma" class="w-5 h-5">
+                                <span class="text-xs text-gray-400">Figma</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-2 bg-[#262626] border border-[#333] px-3 py-2 rounded-lg hover:bg-[#333] transition">
+                                <img src="assets/icons/VScode.png" alt="Visual Studio" class="w-5 h-5">
+                                <span class="text-xs text-gray-400">Visual Studio</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-2 bg-[#262626] border border-[#333] px-3 py-2 rounded-lg hover:bg-[#333] transition">
+                                <img src="assets/icons/github.png" alt="GitHub" class="w-5 h-5">
+                                <span class="text-xs text-gray-400">GitHub</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-2 bg-[#262626] border border-[#333] px-3 py-2 rounded-lg hover:bg-[#333] transition">
+                                <img src="assets/icons/My Sql.png" alt="MySQL" class="w-5 h-5">
+                                <span class="text-xs text-gray-400">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+<section class="mt-8 text-sm text-gray-400 space-y-2">
+
+  <span class="uppercase tracking-widest text-xs">Currently Learning</span>
+  <p class="mt-2">React, REST APIs, system optimization, UI animation</p>
+</section>
+
+                    <div class="flex gap-3 mt-4">
+                     <button
+    onclick="downloadCV(this)"
+    class="bg-[#2a2a2a] border border-[#373737] px-4 py-2 rounded-lg text-xs flex items-center gap-2 hover:bg-[#333] transition-all">
+    <span>Download CV</span>
+</button>
+
+                        <button
+    onclick="copyEmail(this)"
+    class="bg-[#2a2a2a] border border-[#373737] px-4 py-2 rounded-lg text-xs hover:bg-[#333] transition">
+    Copy Email
+</button>
+
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div
+                        class="absolute -top-3 -right-0.7 bg-[#1a2e1a] text-[#4ade80] text-[9.6px] px-3 py-1 rounded-full border border-[#2d4a2d] flex items-center gap-1.5">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#4ade80] animate-pulse"></span>
+                        AVAILABLE FOR COMMISSION
+                    </div>
+                    <div class="mt-5 w-42 h-42 rounded-full  border-4 border-[#2a2a2a] overflow-hidden">
+                        <img src="https://i.pinimg.com/736x/11/aa/69/11aa69c45088a2ea887e0124a0e8e183.jpg" alt="Fuujin"
+                            class="w-full h-full object-cover" />
+                    </div>
+                </div>
+            </header>
+
+
+<section class="space-y-5">
+
                 <div class="flex justify-between items-center text-sm">
                     <div class="flex items-center gap-2 text-gray-400">
                         <span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span>
                         Projects
                     </div>
-                    <button class="text-gray-400 hover:text-white flex items-center gap-1 transition-all cursor-pointer" onclick="loadPage('src/projects.html')">
+                    <button class="text-gray-400 hover:text-white flex items-center gap-1 transition-all cursor-pointer"
+                        onclick="loadPage('src/projects.html')">
                         View All <span class="text-lg">→</span>
                     </button>
                 </div>
 
                 <!-- PROJECT 1 -->
                 <div class="bg-[#262626] border border-[#333] rounded-2xl p-2 space-y-1">
-                    <div
-                        class="flex items-center justify-between p-4 rounded-xl hover:bg-[#2e2e2e] transition-colors cursor-pointer group">
+                  <div
+  onclick="openProject({
+    title: 'Utility Dorm',
+    desc: 'Utility billing and monitoring system designed for dormitories.',
+    image: 'https://i.pinimg.com/1200x/d2/ed/59/d2ed59d3b2a83994a91263ef0d511c9e.jpg',
+    live: '#',
+    github: '#',
+    tags: ['Laravel', 'MySQL', 'Tailwind']
+  })"
+  class="flex items-center justify-between p-4 rounded-xl hover:bg-[#2e2e2e] transition cursor-pointer group">
+
                         <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-gray-300 rounded-full"></div>
+                            <div class="w-12 h-12 bg-cover bg-center "
+                                style="background-image: url('https://i.pinimg.com/1200x/d2/ed/59/d2ed59d3b2a83994a91263ef0d511c9e.jpg')">
+                            </div>
                             <div>
-                                <h3 class="font-bold text-sm uppercase">Project Title 1</h3>
-                                <p class="text-xs text-gray-500">Visual Design, Branding</p>
+                                <h3 class="font-bold text-sm uppercase">Utility Dorm</h3>
+                                <p class="text-xs text-gray-500">
+                                    Utility billing and monitoring system designed for dormitories.
+                                </p>
+                                <div class="flex gap-2 mt-2">
+  <span class="text-[10px] px-2 py-1 bg-[#1f1f1f] rounded">Laravel</span>
+  <span class="text-[10px] px-2 py-1 bg-[#1f1f1f] rounded">MySQL</span>
+  <span class="text-[10px] px-2 py-1 bg-[#1f1f1f] rounded">Tailwind</span>
+</div>
+
+                            </div>
+                        </div>
+                        <span class="text-gray-600 group-hover:text-white transition-colors">→</span>
+                        
+                    </div>
+                </div>
+
+                <!-- PROJECT 2 -->
+                <div class="bg-[#262626] border border-[#333] rounded-2xl p-2 space-y-1">
+                    <div
+                        class="flex items-center justify-between p-4 rounded-xl hover:bg-[#2e2e2e] transition-colors cursor-pointer group"
+                        onclick="openProject({
+  title: 'Infestation Prediction',
+  desc: 'Data-driven infestation risk prediction and analysis system.',
+  image: 'https://i.pinimg.com/736x/a3/d1/9c/a3d19cd17a81c12be4bb7bcb2a6bd486.jpg',
+  live: '#',
+  github: '#',
+  tags: ['Laravel', 'Logistic Regression', 'MySQL']
+})"
+>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-cover bg-center "
+                                style="background-image: url('https://i.pinimg.com/736x/a3/d1/9c/a3d19cd17a81c12be4bb7bcb2a6bd486.jpg')">
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-sm uppercase">Infestation Prediction</h3>
+                                <p class="text-xs text-gray-500">
+                                    Data-driven infestation risk prediction and analysis system.
+                                </p>
+<div class="flex gap-2 mt-2">
+  <span class="text-[10px] px-2 py-1 bg-[#1f1f1f] rounded">Laravel</span>
+  <span class="text-[10px] px-2 py-1 bg-[#1f1f1f] rounded">MySQL</span>
+  <span class="text-[10px] px-2 py-1 bg-[#1f1f1f] rounded">Tailwind</span>
+</div>
+
                             </div>
                         </div>
                         <span class="text-gray-600 group-hover:text-white transition-colors">→</span>
@@ -165,27 +299,31 @@
                 <!-- PROJECT 2 -->
                 <div class="bg-[#262626] border border-[#333] rounded-2xl p-2 space-y-1">
                     <div
-                        class="flex items-center justify-between p-4 rounded-xl hover:bg-[#2e2e2e] transition-colors cursor-pointer group">
+                        class="flex items-center justify-between p-4 rounded-xl hover:bg-[#2e2e2e] transition-colors cursor-pointer group"
+                        onclick="openProject({
+  title: 'Real Time Chat App',
+  desc: 'Real-time messaging application with live user interaction.',
+  image: 'https://i.pinimg.com/736x/8c/27/f1/8c27f1c342c2b2299bdb45ed789dc6ca.jpg',
+  live: '#',
+  github: '#',
+  tags: ['JavaScript', 'WebSocket', 'Firebase']
+})"
+>
                         <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-gray-300 rounded-full"></div>
-                            <div>
-                                <h3 class="font-bold text-sm uppercase">Project Title 1</h3>
-                                <p class="text-xs text-gray-500">Visual Design, Branding</p>
+                            <div class="w-12 h-12 bg-cover bg-center"
+                                style="background-image: url('https://i.pinimg.com/736x/8c/27/f1/8c27f1c342c2b2299bdb45ed789dc6ca.jpg')">
                             </div>
-                        </div>
-                        <span class="text-gray-600 group-hover:text-white transition-colors">→</span>
-                    </div>
-                </div>
-
-                <!-- PROJECT 2 -->
-                <div class="bg-[#262626] border border-[#333] rounded-2xl p-2 space-y-1">
-                    <div
-                        class="flex items-center justify-between p-4 rounded-xl hover:bg-[#2e2e2e] transition-colors cursor-pointer group">
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-gray-300 rounded-full"></div>
                             <div>
-                                <h3 class="font-bold text-sm uppercase">Project Title 1</h3>
-                                <p class="text-xs text-gray-500">Visual Design, Branding</p>
+                                <h3 class="font-bold text-sm uppercase">Real Time Chat App</h3>
+                                <p class="text-xs text-gray-500">
+                                    Real-time messaging application with live user interaction.
+                                </p>
+<div class="flex gap-2 mt-2">
+  <span class="text-[10px] px-2 py-1 bg-[#1f1f1f] rounded">Laravel</span>
+  <span class="text-[10px] px-2 py-1 bg-[#1f1f1f] rounded">MySQL</span>
+  <span class="text-[10px] px-2 py-1 bg-[#1f1f1f] rounded">Tailwind</span>
+</div>
+
                             </div>
                         </div>
                         <span class="text-gray-600 group-hover:text-white transition-colors">→</span>
@@ -201,41 +339,82 @@
                         class="bg-[#2a2a2a] border border-[#373737] px-6 py-2 rounded-lg text-sm font-medium cursor-pointer hover:bg-[#333]">Hire
                         Me</button>
                     <button
-                        class="bg-[#2a2a2a] border border-[#373737] px-6 py-2 rounded-lg text-sm font-medium cursor-pointer hover:bg-[#333]">Copy
+                        class="bg-[#2a2a2a] border border-[#373737] px-6 py-2 rounded-lg text-sm font-medium cursor-pointer hover:bg-[#333]"  onclick="copyEmail(this)">Copy
                         Email</button>
                 </div>
             </section>
 
             <!-- FOOTER AREA -->
-            <footer class="mt-auto border-t border-[#2a2a2a] pt-8 flex flex-col gap-8">
-                <div class="flex justify-between items-center">
-                    <div class="flex items-center gap-2 text-sm text-gray-400">
-                        <span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span>
-                        Follow Me
-                    </div>
-                    <div class="flex gap-4 text-gray-400">
-                        <span
-                            class="hover:text-white cursor-pointer transition duration-500 ease-in-out hover:scale-140"><img
-                                src="assets/footer/facebook.png" alt=""></span>
-                        <span
-                            class="hover:text-white cursor-pointer transition duration-500 ease-in-out hover:scale-140"><img
-                                src="assets/footer/discord.png" alt=""></span>
-                        <span
-                            class="hover:text-white cursor-pointer transition duration-500 ease-in-out hover:scale-140"><img
-                                src="assets/footer/github.png" alt=""></span>
-                        <span
-                            class="hover:text-white cursor-pointer transition duration-500 ease-in-out hover:scale-140"><img
-                                src="assets/footer/instagram.png" alt=""></span>
-                    </div>
-                </div>
-                <div
-                    class="bg-[#262626] rounded-xl p-8 text-center text-[10px] text-gray-500 uppercase tracking-widest">
-                    2026 — Personal Portfolio By @Fuujin
-                </div>
-            </footer>
+ <footer class="mt-auto pt-8 flex flex-col gap-8 relative">
+  <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#3a3a3a] to-transparent"></div>
+
+  <div class="flex justify-between items-center">
+    <div class="flex items-center gap-3 text-xs uppercase tracking-widest text-gray-500">
+      <span class="w-2 h-2 rounded-full bg-gray-500 animate-pulse"></span>
+      Follow Me
+    </div>
+
+      <!-- social icons here -->
+      <div class="flex gap-4">
+        <a href="https://www.facebook.com/fujiin/" target="_blank" class="hover:text-white cursor-pointer transition duration-500 ease-in-out hover:scale-125">
+          <img src="assets/footer/facebook.png" class="w-5 h-5 opacity-60 hover:opacity-100" alt="FB">
+        </a>
+        <a href="https://discord.com/invite/HK5C5pC" target="_blank" class="hover:text-white cursor-pointer transition duration-500 ease-in-out hover:scale-125">
+          <img src="assets/footer/discord.png" class="w-5 h-5 opacity-60 hover:opacity-100" alt="DC">
+        </a>
+        <a href="https://github.com/fujiin" target="_blank" class="hover:text-white cursor-pointer transition duration-500 ease-in-out hover:scale-125">
+          <img src="assets/footer/github.png" class="w-5 h-5 opacity-60 hover:opacity-100" alt="GH">
+        </a>
+        <a href="https://www.instagram.com/fujiin/" target="_blank" class="hover:text-white cursor-pointer transition duration-500 ease-in-out hover:scale-125">
+          <img src="assets/footer/instagram.png" class="w-5 h-5 opacity-60 hover:opacity-100" alt="IG">
+        </a>
+      </div>
+  </div>
+
+  <div class="bg-[#262626] rounded-xl px-6 py-5 text-center text-[10px] text-gray-500 uppercase tracking-widest">
+    © <span id="year"></span> Fuujin — Personal Portfolio
+  </div>
+</footer>
 
         </div>
-        </template>
+    </template>
+<input type="checkbox" id="project_modal" class="modal-toggle" />
+<div class="modal modal-bottom sm:modal-middle" role="dialog">
+  <div class="modal-box bg-[#212121] border border-[#373737] text-white max-w-2xl p-0 overflow-hidden">
+
+    <!-- IMAGE -->
+    <div class="relative h-56">
+      <img id="modal-image" class="w-full h-full object-cover opacity-90" />
+      <label for="project_modal"
+        class="btn btn-sm btn-circle absolute right-4 top-4 bg-[#212121] border-[#373737] hover:bg-[#333]">✕</label>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="p-8 space-y-5">
+      <div class="flex justify-between items-start">
+        <div>
+          <h3 id="modal-title" class="text-2xl font-bold uppercase"></h3>
+          <p id="modal-desc" class="text-gray-400 text-sm mt-1"></p>
+        </div>
+
+        <div class="flex gap-2">
+          <a id="modal-live" target="_blank"
+            class="px-4 py-2 text-xs rounded-lg bg-[#2a2a2a] border border-[#373737] hover:bg-[#333]">
+            Live
+          </a>
+          <a id="modal-github" target="_blank"
+            class="px-4 py-2 text-xs rounded-lg bg-[#2a2a2a] border border-[#373737] hover:bg-[#333]">
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <div id="modal-tags" class="flex gap-2 flex-wrap"></div>
+    </div>
+  </div>
+
+  <label class="modal-backdrop" for="project_modal"></label>
+</div>
 </body>
 
 
@@ -244,10 +423,30 @@
 
 <!-- ! SCROLLBAR AREA -->
 <style>
-    body{
-        zoom: 0.8;
+    body {
+        zoom: 0.9;
     }
+ .tooltip {
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    background: #1e1e1e;
+    border: 1px solid #333;
+    color: #d1d5db;
+    font-size: 10px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    opacity: 0;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: all 0.2s ease;
+  }
 
+  .group:hover .tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
     ::-webkit-scrollbar {
         width: 8px;
     }
@@ -270,38 +469,103 @@
 
 <!-- !SCRIPT AREA -->
 <script>
-  const card = document.getElementById("content-card");
 
-  function animateSwap(newHTML) {
+function openProject(project) {
+        document.getElementById("modal-title").innerText = project.title;
+        document.getElementById("modal-desc").innerText = project.desc;
+        document.getElementById("modal-image").src = project.image;
+        document.getElementById("modal-live").href = project.live;
+        document.getElementById("modal-github").href = project.github;
 
-    card.classList.add("opacity-0", "translate-y-4");
+        const tagContainer = document.getElementById("modal-tags");
+        tagContainer.innerHTML = "";
 
-    setTimeout(() => {
-      card.innerHTML = newHTML;
+        project.tags.forEach(tag => {
+            const span = document.createElement("span");
+            span.className =
+                "px-3 py-1 text-[10px] uppercase bg-[#262626] border border-[#333] rounded-full text-gray-400";
+            span.innerText = tag;
+            tagContainer.appendChild(span);
+        });
 
-      void card.offsetHeight;
-      card.classList.remove("opacity-0", "translate-y-4");
-    }, 300);
-  }
-
-  function loadHome() {
-    const tpl = document.getElementById("home-template");
-    if (!tpl) return;
-    animateSwap(tpl.innerHTML);
-  }
-
-  async function loadPage(page) {
-    try {
-      const res = await fetch(page);
-      const html = await res.text();
-      animateSwap(html);
-    } catch (err) {
-      console.error("Failed to load page:", err);
+        document.getElementById("project_modal").checked = true;
     }
-  }
 
-  // Initial load
-  loadHome();
+    const EMAIL = "jhoncarlnayaoxx@gmail.com";
+
+    function copyEmail(btn) {
+        navigator.clipboard.writeText(EMAIL).then(() => {
+            const original = btn.innerText;
+
+            btn.innerText = "Copied ✓";
+            btn.classList.add(
+                "bg-[#262626]",
+                "border-[#555]",
+                "text-gray-300"
+            );
+
+            setTimeout(() => {
+                btn.innerText = original;
+                btn.classList.remove(
+                    "bg-[#262626]",
+                    "border-[#555]",
+                    "text-gray-300"
+                );
+            }, 1500);
+        });
+    }
+
+     function downloadCV(btn) {
+        const original = btn.innerText;
+
+        btn.innerText = "Downloading...";
+        btn.classList.add("bg-[#262626]", "border-[#555]");
+
+        const link = document.createElement("a");
+        link.href = "assets/cv/JhonCarlNayao-CV.pdf";
+        link.download = "JhonCarlNayao-CV.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+        setTimeout(() => {
+            btn.innerText = original;
+            btn.classList.remove("bg-[#262626]", "border-[#555]");
+        }, 1500);
+    }
+
+    const card = document.getElementById("content-card");
+
+    function animateSwap(newHTML) {
+
+        card.classList.add("opacity-0", "translate-y-4");
+
+        setTimeout(() => {
+            card.innerHTML = newHTML;
+
+            void card.offsetHeight;
+            card.classList.remove("opacity-0", "translate-y-4");
+        }, 300);
+    }
+
+    function loadHome() {
+        const tpl = document.getElementById("home-template");
+        if (!tpl) return;
+        animateSwap(tpl.innerHTML);
+    }
+
+    async function loadPage(page) {
+        try {
+            const res = await fetch(page);
+            const html = await res.text();
+            animateSwap(html);
+        } catch (err) {
+            console.error("Failed to load page:", err);
+        }
+    }
+
+    // Initial load
+    loadHome();
 </script>
 
 

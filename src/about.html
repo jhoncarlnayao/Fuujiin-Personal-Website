@@ -1,60 +1,58 @@
- <div class="card card-border border-[#373737] bg-[#212121] w-full max-w-xl h-full min-h-[900px] text-white font-sans overflow-hidden">
+<div
+  class="card card-border border-[#373737] bg-[#212121] w-full max-w-xl h-full min-h-[900px] text-white font-sans overflow-hidden">
   <div class="card-body p-8 flex flex-col gap-12">
-    
+
     <section class="space-y-6">
       <div class="flex items-center gap-2 text-sm text-gray-400">
         <span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span>
         About Me
       </div>
-      
-      
-    <div class="space-y-4">
-      
-    <h1 class="text-5xl font-bold tracking-tight">I'm Fuujin</h1>
-   <p class="text-gray-400 text-sm leading-relaxed text-justify">
-  I'm a 4th-year student at the University of Mindanao in Davao City with a strong passion for
-  <span class="font-semibold text-white">web development</span> and digital design. Over the years,
-  I have explored areas such as <span class="font-semibold text-[#00FFD1]">Figma design</span>,
-  <span class="font-semibold text-white">pixel art</span>, and
-  <span class="font-semibold text-[#00FFD1]">poster creation</span>.
-</p>
-
-<p class="text-gray-400 text-sm leading-relaxed text-justify">
-  Most of my projects are self-initiated, allowing me to experiment, learn new technologies,
-  and grow creatively. I also take on small commissions, helping me understand client needs
-  and deliver functional, visually appealing solutions.
-</p>
-
-</div>
 
 
+      <div class="space-y-4">
 
-      <div class="grid grid-cols-3 gap-4 mt-6">
-  <div class="bg-[#262626] border border-[#333] rounded-xl p-4 text-center">
-    <p class="text-2xl font-bold">15+</p>
-    <p class="text-xs text-gray-400">Projects Built</p>
-  </div>
-  <div class="bg-[#262626] border border-[#333] rounded-xl p-4 text-center">
-    <p class="text-2xl font-bold">4+</p>
-    <p class="text-xs text-gray-400">Tech Stacks</p>
-  </div>
-  <div class="bg-[#262626] border border-[#333] rounded-xl p-4 text-center">
-    <p class="text-2xl font-bold">2+</p>
-    <p class="text-xs text-gray-400">Commissions</p>
-  </div>
-</div>
+        <h1 class="text-5xl font-bold tracking-tight">I'm Fuujin</h1>
+        <p class="text-gray-400 text-sm leading-relaxed text-justify">
+          I'm a 4th-year student at the University of Mindanao in Davao City with a strong passion for
+          <span class="font-semibold text-white">web development</span> and digital design. Over the years,
+          I have explored areas such as <span class="font-semibold text-[#00FFD1]">Figma design</span>,
+          <span class="font-semibold text-white">pixel art</span>, and
+          <span class="font-semibold text-[#00FFD1]">poster creation</span>.
+        </p>
 
-      <div class="bg-[#262626] border border-[#333] p-3 rounded-[2rem] w-full aspect-square overflow-hidden mt-8">
-        <img 
-          src="/assets/profile/IMG20260120231211.jpg" 
-          alt="Fuujin Large" 
-          class="w-full h-full object-cover rounded-[1.5rem]"
-        />
+        <p class="text-gray-400 text-sm leading-relaxed text-justify">
+          Most of my projects are self-initiated, allowing me to experiment, learn new technologies,
+          and grow creatively. I also take on small commissions, helping me understand client needs
+          and deliver functional, visually appealing solutions.
+        </p>
+
       </div>
 
 
 
-      
+      <div class="grid grid-cols-3 gap-4 mt-6">
+        <div class="bg-[#262626] border border-[#333] rounded-xl p-4 text-center">
+          <p class="text-2xl font-bold">15+</p>
+          <p class="text-xs text-gray-400">Projects Built</p>
+        </div>
+        <div class="bg-[#262626] border border-[#333] rounded-xl p-4 text-center">
+          <p class="text-2xl font-bold">4+</p>
+          <p class="text-xs text-gray-400">Tech Stacks</p>
+        </div>
+        <div class="bg-[#262626] border border-[#333] rounded-xl p-4 text-center">
+          <p class="text-2xl font-bold">2+</p>
+          <p class="text-xs text-gray-400">Commissions</p>
+        </div>
+      </div>
+
+      <div class="bg-[#262626] border border-[#333] p-3 rounded-[2rem] w-full aspect-square overflow-hidden mt-8">
+        <img src="/assets/profile/IMG20260120231211.jpg" alt="Fuujin Large"
+          class="w-full h-full object-cover rounded-[1.5rem]" />
+      </div>
+
+
+
+
 
 
     </section>
@@ -62,49 +60,82 @@
     <section class="text-center py-6 space-y-6">
       <h2 class="text-4xl font-bold">Let's Work Together</h2>
       <p class="text-gray-400">Creating user-centered experiences and visually appealing designs
-</p>
+      </p>
       <div class="flex justify-center gap-4">
-       <button class="bg-white text-black px-6 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors">
+        <!-- <button class="bg-white text-black px-6 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors">
   Hire Me
-</button>
-
-<button class="bg-[#2a2a2a] border border-[#373737] px-6 py-2 rounded-lg text-sm font-medium hover:bg-[#333] transition-colors">
-  Copy Email
-</button>
+</button> -->
+        <button onclick="downloadCV(this)"
+          class="bg-[#2a2a2a] border border-[#373737] px-4 py-2 rounded-lg text-xs flex items-center gap-2 hover:bg-[#333] transition-all">
+          <span>Download CV</span>
+        </button>
+        <button
+          class="bg-[#2a2a2a] border border-[#373737] px-6 py-2 rounded-lg text-sm font-medium cursor-pointer hover:bg-[#333]"
+          onclick="copyEmail(this)">Copy
+          Email</button>
 
       </div>
     </section>
 
     <footer class="mt-auto pt-8 flex flex-col gap-8 relative">
-  <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#3a3a3a] to-transparent"></div>
-
-  <div class="flex justify-between items-center">
-    <div class="flex items-center gap-3 text-xs uppercase tracking-widest text-gray-500">
-      <span class="w-2 h-2 rounded-full bg-gray-500 animate-pulse"></span>
-      Follow Me
-    </div>
-
-      <!-- social icons here -->
-      <div class="flex gap-4">
-        <a href="https://www.facebook.com/fujiin/" target="_blank" class="hover:text-white cursor-pointer transition duration-500 ease-in-out hover:scale-125">
-          <img src="assets/footer/facebook.png" class="w-5 h-5 opacity-60 hover:opacity-100" alt="FB">
-        </a>
-        <a href="https://discord.com/invite/HK5C5pC" target="_blank" class="hover:text-white cursor-pointer transition duration-500 ease-in-out hover:scale-125">
-          <img src="assets/footer/discord.png" class="w-5 h-5 opacity-60 hover:opacity-100" alt="DC">
-        </a>
-        <a href="https://github.com/fujiin" target="_blank" class="hover:text-white cursor-pointer transition duration-500 ease-in-out hover:scale-125">
-          <img src="assets/footer/github.png" class="w-5 h-5 opacity-60 hover:opacity-100" alt="GH">
-        </a>
-        <a href="https://www.instagram.com/fujiin/" target="_blank" class="hover:text-white cursor-pointer transition duration-500 ease-in-out hover:scale-125">
-          <img src="assets/footer/instagram.png" class="w-5 h-5 opacity-60 hover:opacity-100" alt="IG">
-        </a>
+      <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#3a3a3a] to-transparent">
       </div>
-  </div>
 
-  <div class="bg-[#262626] rounded-xl px-6 py-5 text-center text-[10px] text-gray-500 uppercase tracking-widest">
-    © <span id="year"></span> Fuujin — Personal Portfolio
-  </div>
-</footer>
+      <div class="flex justify-between items-center">
+        <div class="flex items-center gap-3 text-xs uppercase tracking-widest text-gray-500">
+          <span class="w-2 h-2 rounded-full bg-gray-500 animate-pulse"></span>
+          Follow Me
+        </div>
+
+        <!-- social icons here -->
+        <div class="flex gap-4">
+          <a href="https://www.facebook.com/fujiin/" target="_blank"
+            class="hover:text-white cursor-pointer transition duration-500 ease-in-out hover:scale-125">
+            <img src="assets/footer/facebook.png" class="w-5 h-5 opacity-60 hover:opacity-100" alt="FB">
+          </a>
+          <a href="https://discord.com/invite/HK5C5pC" target="_blank"
+            class="hover:text-white cursor-pointer transition duration-500 ease-in-out hover:scale-125">
+            <img src="assets/footer/discord.png" class="w-5 h-5 opacity-60 hover:opacity-100" alt="DC">
+          </a>
+          <a href="https://github.com/fujiin" target="_blank"
+            class="hover:text-white cursor-pointer transition duration-500 ease-in-out hover:scale-125">
+            <img src="assets/footer/github.png" class="w-5 h-5 opacity-60 hover:opacity-100" alt="GH">
+          </a>
+          <a href="https://www.instagram.com/fujiin/" target="_blank"
+            class="hover:text-white cursor-pointer transition duration-500 ease-in-out hover:scale-125">
+            <img src="assets/footer/instagram.png" class="w-5 h-5 opacity-60 hover:opacity-100" alt="IG">
+          </a>
+        </div>
+      </div>
+
+      <div class="bg-[#262626] rounded-xl px-6 py-5 text-center text-[10px] text-gray-500 uppercase tracking-widest">
+        © <span id="year"></span> Fuujin — Personal Portfolio
+      </div>
+    </footer>
 
   </div>
 </div>
+
+<script>
+  function copyEmail(btn) {
+    navigator.clipboard.writeText(EMAIL).then(() => {
+      const original = btn.innerText;
+
+      btn.innerText = "Copied ✓";
+      btn.classList.add(
+        "bg-[#262626]",
+        "border-[#555]",
+        "text-gray-300"
+      );
+
+      setTimeout(() => {
+        btn.innerText = original;
+        btn.classList.remove(
+          "bg-[#262626]",
+          "border-[#555]",
+          "text-gray-300"
+        );
+      }, 1500);
+    });
+  }
+</script>

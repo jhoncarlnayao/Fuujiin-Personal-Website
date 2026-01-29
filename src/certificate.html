@@ -25,13 +25,13 @@
       <div class="flex items-center justify-between p-4 rounded-2xl transition-all cursor-pointer group
                   hover:bg-[#2e2e2e] border border-transparent hover:border-[#3a3a3a]">
         <div class="flex items-center gap-4">
-          <div class="w-14 h-14 rounded-full bg-gradient-to-br from-gray-300 to-gray-400 flex-shrink-0"></div>
+          <div class="w-14 h-14 rounded-full bg-cover bg-center" style="background-image: url('./assets/certificates/certificate1.png')"></div>
           <div>
             <h3 class="font-semibold text-sm uppercase tracking-wide">
-              Certificate Title 1
+              Certificate for HTML and CSS
             </h3>
             <p class="text-[11px] text-gray-500">
-              Visual Design · Branding
+              Certiport · Information Technology Specialist
             </p>
           </div>
         </div>
@@ -39,19 +39,21 @@
           →
         </span>
       </div>
+
+      
 
       <!-- DUPLICATE ITEMS -->
       <!-- You can loop this later if needed -->
       <div class="flex items-center justify-between p-4 rounded-2xl transition-all cursor-pointer group
                   hover:bg-[#2e2e2e] border border-transparent hover:border-[#3a3a3a]">
         <div class="flex items-center gap-4">
-          <div class="w-14 h-14 rounded-full bg-gradient-to-br from-gray-300 to-gray-400"></div>
+          <div class="w-14 h-14 rounded-full bg-cover bg-center" style="background-image: url('./assets/certificates/certificate2.png')"></div>
           <div>
             <h3 class="font-semibold text-sm uppercase tracking-wide">
-              Certificate Title 2
+              Certificate for Databases
             </h3>
             <p class="text-[11px] text-gray-500">
-              UI/UX · Prototyping
+              Certiport · Information Technology Specialist
             </p>
           </div>
         </div>
@@ -63,13 +65,13 @@
       <div class="flex items-center justify-between p-4 rounded-2xl transition-all cursor-pointer group
                   hover:bg-[#2e2e2e] border border-transparent hover:border-[#3a3a3a]">
         <div class="flex items-center gap-4">
-          <div class="w-14 h-14 rounded-full bg-gradient-to-br from-gray-300 to-gray-400"></div>
+          <div class="w-14 h-14 rounded-full bg-cover bg-center" style="background-image: url('./assets/certificates/certificate3.png')"></div>
           <div>
             <h3 class="font-semibold text-sm uppercase tracking-wide">
-              Certificate Title 3
+              Certificate for Java
             </h3>
             <p class="text-[11px] text-gray-500">
-              Web Development
+              Certiport · Information Technology Specialist
             </p>
           </div>
         </div>
@@ -88,17 +90,19 @@
       </p>
 
       <div class="flex justify-center gap-4">
-        <button
+        <!-- <button
           class="bg-white text-black px-6 py-2 rounded-lg text-xs font-semibold
                  hover:bg-gray-200 transition">
           Hire Me
+        </button> -->
+        <button onclick="downloadCV(this)"
+          class="bg-[#2a2a2a] border border-[#373737] px-4 py-2 rounded-lg text-xs flex items-center gap-2 hover:bg-[#333] transition-all">
+          <span>Download CV</span>
         </button>
-
         <button
-          class="bg-[#2a2a2a] border border-[#373737] px-6 py-2 rounded-lg text-xs font-semibold
-                 hover:bg-[#333] transition">
-          Copy Email
-        </button>
+          class="bg-[#2a2a2a] border border-[#373737] px-6 py-2 rounded-lg text-sm font-medium cursor-pointer hover:bg-[#333]"
+          onclick="copyEmail(this)">Copy
+          Email</button>
       </div>
     </section>
 
@@ -106,7 +110,8 @@
     <footer class="mt-auto pt-8 flex flex-col gap-8 relative">
 
       <!-- divider -->
-      <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#3a3a3a] to-transparent"></div>
+      <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#3a3a3a] to-transparent">
+      </div>
 
       <div class="flex justify-between items-center">
         <div class="flex items-center gap-3 text-xs uppercase tracking-widest text-gray-500">
@@ -137,3 +142,27 @@
 
   </div>
 </div>
+
+<script>
+  function copyEmail(btn) {
+    navigator.clipboard.writeText(EMAIL).then(() => {
+      const original = btn.innerText;
+
+      btn.innerText = "Copied ✓";
+      btn.classList.add(
+        "bg-[#262626]",
+        "border-[#555]",
+        "text-gray-300"
+      );
+
+      setTimeout(() => {
+        btn.innerText = original;
+        btn.classList.remove(
+          "bg-[#262626]",
+          "border-[#555]",
+          "text-gray-300"
+        );
+      }, 1500);
+    });
+  }
+</script>

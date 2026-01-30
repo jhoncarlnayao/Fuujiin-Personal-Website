@@ -211,122 +211,149 @@
             </header>
 
 
-<section class="space-y-5">
+<section class="space-y-1">
+<!-- HEADER -->
+<div class="flex justify-between items-center text-sm">
+  <div class="flex items-center gap-2 text-gray-400">
+    <span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span>
+    Projects
+  </div>
 
-                <div class="flex justify-between items-center text-sm">
-                    <div class="flex items-center gap-2 text-gray-400">
-                        <span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span>
-                        Projects
-                    </div>
-                    <button class="text-gray-400 hover:text-white flex items-center gap-1 transition-all cursor-pointer"
-                        onclick="loadPage('src/projects.html')">
-                        View All <span class="text-lg">→</span>
-                    </button>
-                </div>
-
-                <!-- PROJECT 1 -->
-                <div class="bg-[#262626] border border-[#333] rounded-2xl p-2 space-y-1">
-                  <div
-  onclick="openProject({
-    title: 'Utility Dorm',
-    desc: 'Utility billing and monitoring system designed for dormitories.',
-    image: 'https://i.pinimg.com/1200x/d2/ed/59/d2ed59d3b2a83994a91263ef0d511c9e.jpg',
-    live: '#',
-    github: '#',
-    tags: ['C#', 'MySQL', 'Tailwind']
-  })"
-  class="flex items-center justify-between p-4 rounded-xl hover:bg-[#2e2e2e] transition cursor-pointer group">
-
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-cover bg-center "
-                                style="background-image: url('https://i.pinimg.com/1200x/d2/ed/59/d2ed59d3b2a83994a91263ef0d511c9e.jpg')">
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-sm uppercase">Utility Dorm</h3>
-                                <p class="text-xs text-gray-500">
-                                    Utility billing and monitoring system designed for dormitories.
-                                </p>
-                                <div class="flex gap-2 mt-2">
-  <span class="text-[10px] px-2 py-1 bg-[#1f1f1f] rounded">C#</span>
-  <span class="text-[10px] px-2 py-1 bg-[#1f1f1f] rounded">MySQL</span>
-  <span class="text-[10px] px-2 py-1 bg-[#1f1f1f] rounded">Tailwind</span>
+  <button
+    class="text-gray-400 hover:text-white flex items-center gap-1 transition-all cursor-pointer"
+    onclick="loadPage('src/projects.html')">
+    View All <span class="text-lg">→</span>
+  </button>
 </div>
 
-                            </div>
-                        </div>
-                        <span class="text-gray-600 group-hover:text-white transition-colors">→</span>
-                        
-                    </div>
-                </div>
+<!-- PROJECT 1 -->
+<div class=" rounded-2xl p-2 space-y">
+  <div
+    onclick="openProject({
+      title: 'Utility Dorm',
+      desc: 'Utility billing and monitoring system designed for dormitories.',
+      image: 'https://i.pinimg.com/1200x/d2/ed/59/d2ed59d3b2a83994a91263ef0d511c9e.jpg',
+      live: '#',
+      github: 'http://github.com/jhoncarlnayao',
+      tags: ['C#', 'MySQL', 'Tailwind']
+    })"
+    class="flex items-center justify-between p-4 rounded-xl
+           bg-[#262626] border border-[#333]
+           cursor-pointer group
+           transition-all duration-300
+           hover:bg-[#2e2e2e]
+           hover:scale-105
+           hover:shadow-lg
+           hover:border-[#3a3a3a]">
 
-                <!-- PROJECT 2 -->
-                <div class="bg-[#262626] border border-[#333] rounded-2xl p-2 space-y-1">
-                    <div
-                        class="flex items-center justify-between p-4 rounded-xl hover:bg-[#2e2e2e] transition-colors cursor-pointer group"
-                        onclick="openProject({
-  title: 'Infestation Prediction',
-  desc: 'Data-driven infestation risk prediction and analysis system.',
-  image: 'https://i.pinimg.com/736x/a3/d1/9c/a3d19cd17a81c12be4bb7bcb2a6bd486.jpg',
-  live: '#',
-  github: '#',
-  tags: ['Laravel', 'Javascript', 'Tailwind']
-})"
->
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-cover bg-center "
-                                style="background-image: url('https://i.pinimg.com/736x/a3/d1/9c/a3d19cd17a81c12be4bb7bcb2a6bd486.jpg')">
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-sm uppercase">Infestation Prediction</h3>
-                                <p class="text-xs text-gray-500">
-                                    Data-driven infestation risk prediction and analysis system.
-                                </p>
-<div class="flex gap-2 mt-2">
-  <span class="text-[10px] px-2 py-1 bg-[#1f1f1f] rounded">Laravel</span>
-  <span class="text-[10px] px-2 py-1 bg-[#1f1f1f] rounded">JavaScript</span>
-  <span class="text-[10px] px-2 py-1 bg-[#1f1f1f] rounded">Tailwind</span>
+    <div class="flex items-center gap-4">
+      <div class="w-12 h-12 bg-cover bg-center rounded-md"
+           style="background-image: url('https://i.pinimg.com/1200x/d2/ed/59/d2ed59d3b2a83994a91263ef0d511c9e.jpg')">
+      </div>
+
+      <div>
+        <h3 class="font-bold text-sm uppercase">Utility Dorm</h3>
+        <p class="text-xs text-gray-500">
+          Utility billing and monitoring system designed for dormitories.
+        </p>
+
+        <div class="flex flex-wrap gap-2 mt-2">
+          <span class="text-[10px] px-2 py-1 bg-[#1f1f1f] border border-[#2f2f2f] rounded-md text-gray-400 group-hover:text-gray-300 transition">C#</span>
+          <span class="text-[10px] px-2 py-1 bg-[#1f1f1f] border border-[#2f2f2f] rounded-md text-gray-400 group-hover:text-gray-300 transition">MySQL</span>
+          <span class="text-[10px] px-2 py-1 bg-[#1f1f1f] border border-[#2f2f2f] rounded-md text-gray-400 group-hover:text-gray-300 transition">Tailwind</span>
+        </div>
+      </div>
+    </div>
+
+    <span class="text-gray-600 group-hover:text-white transition-transform group-hover:translate-x-1">→</span>
+  </div>
 </div>
 
-                            </div>
-                        </div>
-                        <span class="text-gray-600 group-hover:text-white transition-colors">→</span>
-                    </div>
-                </div>
+<!-- PROJECT 2 -->
+<div class=" rounded-2xl p-2 space-y-1">
+  <div
+    onclick="openProject({
+      title: 'Infestation Prediction',
+      desc: 'Data-driven infestation risk prediction and analysis system.',
+      image: 'https://i.pinimg.com/736x/a3/d1/9c/a3d19cd17a81c12be4bb7bcb2a6bd486.jpg',
+      live: '#',
+      github: '#',
+      tags: ['Laravel', 'JavaScript', 'Tailwind']
+    })"
+    class="flex items-center justify-between p-4 rounded-xl
+           bg-[#262626] border border-[#333]
+           cursor-pointer group
+           transition-all duration-300
+           hover:bg-[#2e2e2e]
+           hover:scale-105
+           hover:shadow-lg
+           hover:border-[#3a3a3a]">
 
-                <!-- PROJECT 2 -->
-                <div class="bg-[#262626] border border-[#333] rounded-2xl p-2 space-y-1">
-                    <div
-                        class="flex items-center justify-between p-4 rounded-xl hover:bg-[#2e2e2e] transition-colors cursor-pointer group"
-                        onclick="openProject({
-  title: 'Real Time Chat App',
-  desc: 'Real-time messaging application with live user interaction.',
-  image: 'https://i.pinimg.com/736x/8c/27/f1/8c27f1c342c2b2299bdb45ed789dc6ca.jpg',
-  live: '#',
-  github: '#',
-  tags: ['JavaScript', 'Node']
-})"
->
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-cover bg-center"
-                                style="background-image: url('https://i.pinimg.com/736x/8c/27/f1/8c27f1c342c2b2299bdb45ed789dc6ca.jpg')">
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-sm uppercase">Real Time Chat App</h3>
-                                <p class="text-xs text-gray-500">
-                                    Real-time messaging application with live user interaction.
-                                </p>
-<div class="flex gap-2 mt-2">
-  <span class="text-[10px] px-2 py-1 bg-[#1f1f1f] rounded">JavaScript</span>
-  <span class="text-[10px] px-2 py-1 bg-[#1f1f1f] rounded">Node</span>
+    <div class="flex items-center gap-4">
+      <div class="w-12 h-12 bg-cover bg-center rounded-md"
+           style="background-image: url('https://i.pinimg.com/736x/a3/d1/9c/a3d19cd17a81c12be4bb7bcb2a6bd486.jpg')">
+      </div>
 
+      <div>
+        <h3 class="font-bold text-sm uppercase">Infestation Prediction</h3>
+        <p class="text-xs text-gray-500">
+          Data-driven infestation risk prediction and analysis system.
+        </p>
+
+        <div class="flex flex-wrap gap-2 mt-2">
+          <span class="text-[10px] px-2 py-1 bg-[#1f1f1f] border border-[#2f2f2f] rounded-md text-gray-400 group-hover:text-gray-300 transition">Laravel</span>
+          <span class="text-[10px] px-2 py-1 bg-[#1f1f1f] border border-[#2f2f2f] rounded-md text-gray-400 group-hover:text-gray-300 transition">JavaScript</span>
+          <span class="text-[10px] px-2 py-1 bg-[#1f1f1f] border border-[#2f2f2f] rounded-md text-gray-400 group-hover:text-gray-300 transition">Tailwind</span>
+        </div>
+      </div>
+    </div>
+
+    <span class="text-gray-600 group-hover:text-white transition-transform group-hover:translate-x-1">→</span>
+  </div>
 </div>
 
-                            </div>
-                        </div>
-                        <span class="text-gray-600 group-hover:text-white transition-colors">→</span>
-                    </div>
-                </div>
-            </section>
+<!-- PROJECT 3 -->
+<div class=" rounded-2xl p-2 space-y-1">
+  <div
+    onclick="openProject({
+      title: 'Real Time Chat App',
+      desc: 'Real-time messaging application with live user interaction.',
+      image: 'https://i.pinimg.com/736x/8c/27/f1/8c27f1c342c2b2299bdb45ed789dc6ca.jpg',
+      live: '#',
+      github: '#',
+      tags: ['JavaScript', 'Node']
+    })"
+    class="flex items-center justify-between p-4 rounded-xl
+           bg-[#262626] border border-[#333]
+           cursor-pointer group
+           transition-all duration-300
+           hover:bg-[#2e2e2e]
+           hover:scale-105
+           hover:shadow-lg
+           hover:border-[#3a3a3a]">
+
+    <div class="flex items-center gap-4">
+      <div class="w-12 h-12 bg-cover bg-center rounded-md"
+           style="background-image: url('https://i.pinimg.com/736x/8c/27/f1/8c27f1c342c2b2299bdb45ed789dc6ca.jpg')">
+      </div>
+
+      <div>
+        <h3 class="font-bold text-sm uppercase">Real Time Chat App</h3>
+        <p class="text-xs text-gray-500">
+          Real-time messaging application with live user interaction.
+        </p>
+
+        <div class="flex flex-wrap gap-2 mt-2">
+          <span class="text-[10px] px-2 py-1 bg-[#1f1f1f] border border-[#2f2f2f] rounded-md text-gray-400 group-hover:text-gray-300 transition">JavaScript</span>
+          <span class="text-[10px] px-2 py-1 bg-[#1f1f1f] border border-[#2f2f2f] rounded-md text-gray-400 group-hover:text-gray-300 transition">Node</span>
+        </div>
+      </div>
+    </div>
+
+    <span class="text-gray-600 group-hover:text-white transition-transform group-hover:translate-x-1">→</span>
+  </div>
+</div>
+      </section>
 
             <section class="text-center py-10 space-y-6">
                 <h2 class="text-4xl font-bold">Let's Work Together</h2>
@@ -337,7 +364,7 @@
 </button> -->
  <button
     onclick="downloadCV(this)"
-    class="bg-[#2a2a2a] border border-[#373737] px-4 py-2 rounded-lg text-xs flex items-center gap-2 hover:bg-[#333] transition-all">
+    class="bg-[#2a2a2a] border border-[#373737] px-4 py-2 rounded-lg text-xs flex items-center gap-2 hover:bg-[#333] transition-all cursor-pointer">
     <span>Download CV</span>
 </button>
 

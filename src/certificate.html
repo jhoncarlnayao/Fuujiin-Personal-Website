@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Certificates</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind + daisyUI -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
+</head>
+
+<body class="min-h-screen bg-black flex items-center justify-center p-6">
+
 <div class="card card-border border-[#373737] bg-[#212121] w-full max-w-xl text-white font-sans overflow-hidden">
   <div class="card-body p-8 flex flex-col gap-12">
 
@@ -10,108 +24,100 @@
 
       <div class="space-y-4">
         <h1 class="text-5xl font-bold tracking-tight">My Certificates</h1>
-        <p class="text-gray-400 text-sm leading-relaxed text-justify max-w-prose">
+        <p class="text-gray-400 text-sm leading-relaxed text-justify">
           Here are some of the certificates I have earned through various courses
           and training programs. These reflect my commitment to continuous
-          learning and growth in web development and design.
+          learning and growth.
         </p>
       </div>
     </header>
 
-    <!-- CERTIFICATE LIST -->
-    <div class="bg-[#262626] border border-[#333] rounded-3xl p-2 space-y-1">
+    <!-- CERTIFICATES (SEPARATE CARDS) -->
+    <section class="space-y-4">
 
-      <!-- ITEM -->
-      <div class="flex items-center justify-between p-4 rounded-2xl transition-all cursor-pointer group
-                  hover:bg-[#2e2e2e] border border-transparent hover:border-[#3a3a3a]">
+      <!-- CERT 1 -->
+      <label for="cert1"
+        class="flex items-center justify-between p-4 rounded-xl
+               bg-[#262626] border border-[#333]
+               cursor-pointer group
+               transition-all duration-300
+               hover:bg-[#2e2e2e]
+               hover:scale-105
+               hover:shadow-lg
+               hover:border-[#3a3a3a]">
+
         <div class="flex items-center gap-4">
-          <div class="w-14 h-14 rounded-full bg-cover bg-center" style="background-image: url('./assets/certificates/certificate1.png')"></div>
+          <div class="w-12 h-12 rounded-md bg-cover bg-center"
+            style="background-image:url('./assets/certificates/certificate1.png')"></div>
+
           <div>
-            <h3 class="font-semibold text-sm uppercase tracking-wide">
-              Certificate for HTML and CSS
-            </h3>
-            <p class="text-[11px] text-gray-500">
+            <h3 class="font-bold text-sm uppercase">HTML & CSS</h3>
+            <p class="text-xs text-gray-500">
               Certiport · Information Technology Specialist
             </p>
           </div>
         </div>
-        <span class="text-gray-600 group-hover:text-white transition-all group-hover:translate-x-1">
-          →
-        </span>
-      </div>
 
-      
+        <span class="text-gray-600 group-hover:text-white transition-transform group-hover:translate-x-1">→</span>
+      </label>
 
-      <!-- DUPLICATE ITEMS -->
-      <!-- You can loop this later if needed -->
-      <div class="flex items-center justify-between p-4 rounded-2xl transition-all cursor-pointer group
-                  hover:bg-[#2e2e2e] border border-transparent hover:border-[#3a3a3a]">
+      <!-- CERT 2 -->
+      <label for="cert2"
+        class="flex items-center justify-between p-4 rounded-xl
+               bg-[#262626] border border-[#333]
+               cursor-pointer group
+               transition-all duration-300
+               hover:bg-[#2e2e2e]
+               hover:scale-105
+               hover:shadow-lg
+               hover:border-[#3a3a3a]">
+
         <div class="flex items-center gap-4">
-          <div class="w-14 h-14 rounded-full bg-cover bg-center" style="background-image: url('./assets/certificates/certificate2.png')"></div>
+          <div class="w-12 h-12 rounded-md bg-cover bg-center"
+            style="background-image:url('./assets/certificates/certificate2.png')"></div>
+
           <div>
-            <h3 class="font-semibold text-sm uppercase tracking-wide">
-              Certificate for Databases
-            </h3>
-            <p class="text-[11px] text-gray-500">
+            <h3 class="font-bold text-sm uppercase">Databases</h3>
+            <p class="text-xs text-gray-500">
               Certiport · Information Technology Specialist
             </p>
           </div>
         </div>
-        <span class="text-gray-600 group-hover:text-white transition-all group-hover:translate-x-1">
-          →
-        </span>
-      </div>
 
-      <div class="flex items-center justify-between p-4 rounded-2xl transition-all cursor-pointer group
-                  hover:bg-[#2e2e2e] border border-transparent hover:border-[#3a3a3a]">
+        <span class="text-gray-600 group-hover:text-white transition-transform group-hover:translate-x-1">→</span>
+      </label>
+
+      <!-- CERT 3 -->
+      <label for="cert3"
+        class="flex items-center justify-between p-4 rounded-xl
+               bg-[#262626] border border-[#333]
+               cursor-pointer group
+               transition-all duration-300
+               hover:bg-[#2e2e2e]
+               hover:scale-105
+               hover:shadow-lg
+               hover:border-[#3a3a3a]">
+
         <div class="flex items-center gap-4">
-          <div class="w-14 h-14 rounded-full bg-cover bg-center" style="background-image: url('./assets/certificates/certificate3.png')"></div>
+          <div class="w-12 h-12 rounded-md bg-cover bg-center"
+            style="background-image:url('./assets/certificates/certificate3.png')"></div>
+
           <div>
-            <h3 class="font-semibold text-sm uppercase tracking-wide">
-              Certificate for Java
-            </h3>
-            <p class="text-[11px] text-gray-500">
+            <h3 class="font-bold text-sm uppercase">Java</h3>
+            <p class="text-xs text-gray-500">
               Certiport · Information Technology Specialist
             </p>
           </div>
         </div>
-        <span class="text-gray-600 group-hover:text-white transition-all group-hover:translate-x-1">
-          →
-        </span>
-      </div>
 
-    </div>
+        <span class="text-gray-600 group-hover:text-white transition-transform group-hover:translate-x-1">→</span>
+      </label>
 
-    <!-- CTA -->
-    <section class="text-center py-10 space-y-6">
-      <h2 class="text-4xl font-bold">Let’s Work Together</h2>
-      <p class="text-gray-400 text-sm max-w-md mx-auto">
-        Creating user-centered experiences and visually appealing digital solutions.
-      </p>
-
-      <div class="flex justify-center gap-4">
-        <!-- <button
-          class="bg-white text-black px-6 py-2 rounded-lg text-xs font-semibold
-                 hover:bg-gray-200 transition">
-          Hire Me
-        </button> -->
-        <button onclick="downloadCV(this)"
-          class="bg-[#2a2a2a] border border-[#373737] px-4 py-2 rounded-lg text-xs flex items-center gap-2 hover:bg-[#333] transition-all">
-          <span>Download CV</span>
-        </button>
-        <button
-          class="bg-[#2a2a2a] border border-[#373737] px-6 py-2 rounded-lg text-sm font-medium cursor-pointer hover:bg-[#333]"
-          onclick="copyEmail(this)">Copy
-          Email</button>
-      </div>
     </section>
 
     <!-- FOOTER -->
     <footer class="mt-auto pt-8 flex flex-col gap-8 relative">
-
-      <!-- divider -->
-      <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#3a3a3a] to-transparent">
-      </div>
+      <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#3a3a3a] to-transparent"></div>
 
       <div class="flex justify-between items-center">
         <div class="flex items-center gap-3 text-xs uppercase tracking-widest text-gray-500">
@@ -120,18 +126,10 @@
         </div>
 
         <div class="flex gap-4">
-          <a href="#" class="transition hover:scale-125">
-            <img src="assets/footer/facebook.png" class="w-5 h-5 opacity-60 hover:opacity-100" />
-          </a>
-          <a href="#" class="transition hover:scale-125">
-            <img src="assets/footer/discord.png" class="w-5 h-5 opacity-60 hover:opacity-100" />
-          </a>
-          <a href="#" class="transition hover:scale-125">
-            <img src="assets/footer/github.png" class="w-5 h-5 opacity-60 hover:opacity-100" />
-          </a>
-          <a href="#" class="transition hover:scale-125">
-            <img src="assets/footer/instagram.png" class="w-5 h-5 opacity-60 hover:opacity-100" />
-          </a>
+          <img src="assets/footer/facebook.png" class="w-5 h-5 opacity-60 hover:opacity-100" />
+          <img src="assets/footer/discord.png" class="w-5 h-5 opacity-60 hover:opacity-100" />
+          <img src="assets/footer/github.png" class="w-5 h-5 opacity-60 hover:opacity-100" />
+          <img src="assets/footer/instagram.png" class="w-5 h-5 opacity-60 hover:opacity-100" />
         </div>
       </div>
 
@@ -143,26 +141,50 @@
   </div>
 </div>
 
+<!-- ================= MODALS ================= -->
+
+<input type="checkbox" id="cert1" class="modal-toggle" />
+<div class="modal">
+  <div class="modal-box bg-[#262626] border border-[#373737] max-w-3xl space-y-4">
+    <label for="cert1" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
+    <img src="./assets/certificates/certificate1.png" class="rounded-xl border border-[#333]" />
+    <h3 class="text-lg font-semibold uppercase">HTML & CSS</h3>
+    <p class="text-sm text-gray-400">
+      Awarded for building responsive layouts and modern UI styling.
+    </p>
+  </div>
+  <label class="modal-backdrop" for="cert1"></label>
+</div>
+
+<input type="checkbox" id="cert2" class="modal-toggle" />
+<div class="modal">
+  <div class="modal-box bg-[#262626] border border-[#373737] max-w-3xl space-y-4">
+    <label for="cert2" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
+    <img src="./assets/certificates/certificate2.png" class="rounded-xl border border-[#333]" />
+    <h3 class="text-lg font-semibold uppercase">Databases</h3>
+    <p class="text-sm text-gray-400">
+      Focused on SQL queries, normalization, and database management.
+    </p>
+  </div>
+  <label class="modal-backdrop" for="cert2"></label>
+</div>
+
+<input type="checkbox" id="cert3" class="modal-toggle" />
+<div class="modal">
+  <div class="modal-box bg-[#262626] border border-[#373737] max-w-3xl space-y-4">
+    <label for="cert3" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
+    <img src="./assets/certificates/certificate3.png" class="rounded-xl border border-[#333]" />
+    <h3 class="text-lg font-semibold uppercase">Java</h3>
+    <p class="text-sm text-gray-400">
+      Completed Java programming exercises covering OOP fundamentals.
+    </p>
+  </div>
+  <label class="modal-backdrop" for="cert3"></label>
+</div>
+
 <script>
-  function copyEmail(btn) {
-    navigator.clipboard.writeText(EMAIL).then(() => {
-      const original = btn.innerText;
-
-      btn.innerText = "Copied ✓";
-      btn.classList.add(
-        "bg-[#262626]",
-        "border-[#555]",
-        "text-gray-300"
-      );
-
-      setTimeout(() => {
-        btn.innerText = original;
-        btn.classList.remove(
-          "bg-[#262626]",
-          "border-[#555]",
-          "text-gray-300"
-        );
-      }, 1500);
-    });
-  }
+  document.getElementById("year").textContent = new Date().getFullYear();
 </script>
+
+</body>
+</html>
